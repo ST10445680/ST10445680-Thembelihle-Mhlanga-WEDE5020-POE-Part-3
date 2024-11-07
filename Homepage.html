@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home - Haven of Hope</title>
+    <meta name="description" content="Welcome to Haven of Hope. Our mission is to support survivors of gender-based violence through advocacy, resources, and direct assistance.">
+    <meta name="keywords" content="Home, Haven of Hope, gender-based violence, survivors, support services, nonprofit, help">
+    <meta name="robots" content="index, follow">
+
+     <link rel="stylesheet" href="style.css">
+   
+
+    
+</head>
+
+<header> 
+    <img src = "./images/haven-of-hope-logo.png" alt="Haven of Hope logo" width="150" height="150"/>
+</header>
+
+<nav class="navbar">
+    <ul>
+    <li><a href="./AboutUs.html" target="_blank">AboutUs</a></li> 
+     <li><a href = "./Activism.html" target ="_blank"> Activism</a></li>
+     <li><a href="./ContactUs.html" target="_blank">ContactUs</a></li>
+     <li><a href="./Donate.html" target="_blank">Donate</a></li>
+     <li><a href="./GetHelp.html" target="_blank">GetHelp</a></li>
+     <li><a href="./GetInvolved.html" target="_blank">GetInvolved</a></li>
+     <li><a href="./Services.html" target="_blank">Services</a></li>
+     <li><a href="./SuccessStories.html" target="_blank">SuccessStories</a></li>
+     <li><a href="./Volunteer.html" target="_blank">Volunteer</a></li>
+     <li><a href = "./VolunteerStories.html" target="_blank">Volunteer stories</a></li>
+    </ul>
+  </nav>
+
+<body>
+     
+    
+    <hr>
+     <br><br>
+    <main>
+    <p>Welcome to Haven of Hope, where we are committed to providing a secure haven and comprehensive assistance to survivors of gender-based violence (GBV) in South Africa. Our goal is to empower individuals to heal, rebuild, and flourish. If you or someone you know requires immediate assistance, we are here to help.<br> Get Help Now.</p>
+
+    <h1>Support Our Mission:</h1>
+    <br>
+    <p> Every form of support is instrumental in creating lasting change. Whether it's through a donation or by offering your time as a volunteer, your involvement is vital in our efforts against GBV.<br><a href = "Donate.html"> Donate Now </a>|<a href ="Volunteer.html"> Volunteer with Us.</a></p>
+    <br>
+    <h1>Success Stories:</h1> 
+    <br>
+    <p>Explore the inspiring stories of survivors who have transformed their lives with our assistance. Their journeys serve as a testament to the impact of your support. <a href="VolunteerStories.html"> Read Their Stories.</p></a>
+    </main>
+
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd6Rtm82G4kbaWAmbO0X5y1oQSvrTHNTDGfrhF_7rFk4707CQ/viewform?embedded=true" width="640" height="1579" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    
+</body>
+
+<footer>
+    <p>&copy; <span id="year"></span> Haven of Hope | All rights reserved. Current Date and Time: <span id="date-time"></span></p>
+</footer>
+
+<script>
+    // Function to display current year
+    function displayYear() {
+        const currentYear = new Date().getFullYear();
+        document.getElementById("year").textContent = currentYear;
+    }
+
+    // Function to format and display the current date and time
+    function formatDateAndTime() {
+        const now = new Date();
+        const day = now.getDate().toString().padStart(2, '0');  // Get day of month
+        const month = (now.getMonth() + 1).toString().padStart(2, '0');  // Get month
+        const year = now.getFullYear();  // Get year
+        const hours = now.getHours().toString().padStart(2, '0');  // Get hours
+        const minutes = now.getMinutes().toString().padStart(2, '0');  // Get minutes
+        const seconds = now.getSeconds().toString().padStart(2, '0');  // Get seconds
+
+        return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+    }
+
+    // Display current year in the copyright text
+    displayYear();
+
+    // Set the formatted date and time in the footer
+    document.getElementById("date-time").textContent = formatDateAndTime();
+
+    // Update every second to show the current time
+    setInterval(function() {
+        document.getElementById("date-time").textContent = formatDateAndTime();
+    }, 1000);  // 1000ms = 1 second
+</script>
+
+</html>
